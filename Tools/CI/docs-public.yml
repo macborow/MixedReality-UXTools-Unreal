@@ -5,7 +5,6 @@ trigger:
 - public/*
 
 variables:
-- template: settings/common.yml
 - template: settings/docs.yml
 
 jobs:
@@ -19,6 +18,7 @@ jobs:
     SrcRepoDir: $(Build.SourcesDirectory)
     DstRepoDir: $(Build.ArtifactStagingDirectory)\dstrepo
     SrcBranch: $(Build.SourceBranch)
+    UXTSourceDir: $(Build.SourcesDirectory)
   steps:
   - checkout: self
     clean: true
